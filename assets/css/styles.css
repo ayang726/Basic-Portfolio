@@ -14,7 +14,7 @@ ul{
 	list-style: none;
 }
 
-h1, h5 {
+h1 {
 	font-family: 'Georgia', Times, Times New Roman, serif;
 }
 
@@ -22,11 +22,7 @@ h1{
 	color: #4aaaa5;
 }
 
-h5{
-	color: white;
-}
-
-p, a {
+p, a, form{
 	color:#777;
 }
 
@@ -35,7 +31,6 @@ p, a {
 	background: white;
 	border-bottom: 1px solid #ccc
 }
-
 
 .header::after{
 	content: "";
@@ -53,31 +48,39 @@ p, a {
 	background: #4aaaa5;
 	float: left;
 	padding: 20px 40px;
+	min-height: 30px;
 	margin: 0;
 }
 
 .header .nav-bar {
-	margin: auto;
+	margin: auto 0;
 	float: right;
-	height: 100%;
 }
 
 .header .nav-bar ul {
 	margin: auto;
 	padding: 0;
-	height: 100%;
-}
-
-.header .nav-bar ul::after {
-	content: "";
-  	display: block;
-  	clear: both;
 }
 
 
 .header ul li {
-	float: left;
-	margin: 0 15px;
+	display: inline-block;
+	/* margin: 0 15px; */
+	box-sizing: border-box;
+}
+
+
+.header ul li a {
+	display: block;
+	line-height: 46px;
+	height: 100%;
+	widows: 100%;
+	padding: 15px;
+}
+
+.header ul li a:hover {
+	background: #4aaaa5;
+	color: #fff;
 }
 
 /* Body Styles*/
@@ -85,7 +88,7 @@ p, a {
 	background: white;
 	border: solid 1px #ddd;
  	margin: 50px auto;
- 	padding: 50px 0;
+	padding: 50px 0;
 }
 
 .body .portrait {
@@ -94,10 +97,11 @@ p, a {
 	margin: 10px 30px 30px 0;
 }
 .body h1, .body #about {
-	margin: 0 40px;
+	width: 90%;
+	margin: 0 auto;
 }
 .body hr {
-	width: 880px;
+	width: 90%;
 }
 .body #about p{
 	line-height: 2em;
@@ -105,6 +109,11 @@ p, a {
 }
 
 /*Portfolio Body Styles*/
+#portfolio {
+	width: 90%;
+	margin: 0 auto;
+}
+
 #portfolio::after {
 	content: "";
 	display: block;
@@ -114,22 +123,71 @@ p, a {
 .portfolio-item{
 	float: left;
 	padding: 0;
-	margin: 20px;
+	margin: 20px 40px 20px 0;
+	position: relative;
 }
 
-#portfolio img {
-	width: 30%;
-	
+.portfolio-item img {
+	width: 300px;
+	height: 200px;
 }
+.portfolio-item a {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	height: 50px;
+	color: #fff;
+	background: #4aaaa5;
+	text-align: center;
+	line-height: 50px;
+}
+
+/* Contact Body Style */
+#contact {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#contact p{
+	color: #777;
+	margin: 1em 0 0.5em;
+}
+
+#contact input, #contact textarea{
+	display: block;
+	width: 100%;
+	padding: 0.5em 0;;
+	font-size: 0.8em;
+}
+
+#contact input:focus, #contact textarea:focus{
+	background: #f3eee1
+}
+
+#contact .submit-button{
+	margin-top: 1em;
+	width: 100px;
+	border: none;
+	background: #4aaaa5;
+	color: white;
+	height: 2em
+}
+
+#contact .submit-button:hover {
+	background: #2c7d78
+}
+
 
 /* Footer styles*/
 .footer-banner {
 	background: #666;
 	border-top: 8px solid #4aaaa5;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 .footer{
-	/*margin: 0 auto;*/
-	height: 50px;
+	height: 40px;
 }
 
 .footer p {
@@ -137,4 +195,5 @@ p, a {
 	text-align: center;
 	height: 100%;
 	margin: auto;
+	line-height: 40px;
 }
