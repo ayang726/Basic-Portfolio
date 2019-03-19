@@ -141,6 +141,17 @@ p, a, form{
 	text-align: center;
 	line-height: 50px;
 }
+.portfolio-item:hover span{
+	display: none;
+}
+
+.portfolio-item:hover #crafty::after {
+	content: 'Very Cheesy';
+}
+
+.portfolio-item:hover #website::after {
+	content: 'Work in Progress';
+}
 
 /* Contact Body Style */
 #contact {
@@ -170,7 +181,7 @@ p, a, form{
 	border: none;
 	background: #4aaaa5;
 	color: white;
-	height: 2em
+	height: 2.5em;
 }
 
 #contact .submit-button:hover {
