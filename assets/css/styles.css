@@ -53,29 +53,29 @@ p, a, form{
 }
 
 .header .nav-bar {
-	margin: auto 0;
 	float: right;
 }
 
 .header .nav-bar ul {
-	margin: auto;
 	padding: 0;
+	display: flex;
+	height: 100%;
 }
 
 
 .header ul li {
-	display: inline-block;
-	/* margin: 0 15px; */
-	box-sizing: border-box;
+	/* display: inline-block; */
+	/* flex-direction: column; */
+	
 }
 
 
 .header ul li a {
-	display: block;
+	/* display: inline-block; */
 	line-height: 46px;
 	height: 100%;
-	widows: 100%;
-	padding: 15px;
+	width: 100%;
+	padding: 1em;
 }
 
 .header ul li a:hover {
