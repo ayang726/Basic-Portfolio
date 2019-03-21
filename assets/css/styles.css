@@ -28,6 +28,7 @@ p, a, form{
 
 /* Header Style */
 .header-banner{
+	z-index: 10;
 	background: white;
 	border-bottom: 1px solid #ccc
 }
@@ -194,6 +195,7 @@ p, a, form{
 
 /* Footer styles*/
 .footer-banner {
+	z-index: 10;
 	background: #666;
 	border-top: 8px solid #4aaaa5;
 	position: fixed;
